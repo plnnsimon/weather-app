@@ -3,7 +3,7 @@
         <header v-if="addCityActive" class="container">
             <nav>
                 <span>
-                    Add City
+                    Weather
                 </span>
                 <div class="right">
                     <i @click="addCity" class="far fa-plus-square"></i>
@@ -11,7 +11,7 @@
                 </div>
             </nav>
         </header>
-        <header v-else class="container" :class="{day: isDay, night: isNight}">
+        <header v-else class="container" >
             <nav>
                 <router-link class="router-link" :to="{name: 'AddCity'}">
                     <i class="fas fa-angle-left"></i>
@@ -50,14 +50,8 @@ span {
     font-weight: 700;
 }
 
-.day {
-    transition: 0.5s ease all;
-    background: rgb(0, 217, 255);
-}
-
-.night {
-    transition: 0.5s ease all;
-    background: rgb(26, 30, 66);
+.container {
+    background: transparent;
 }
 header nav {
     display: flex;

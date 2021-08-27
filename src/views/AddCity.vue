@@ -75,7 +75,7 @@ export default {
   flex-wrap: wrap;
   width: 100%;
   padding-top: 60px;
-  background: rgb(111 111 111);
+  background: transparent;
 }
 
 .city-link {

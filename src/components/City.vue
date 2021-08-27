@@ -67,11 +67,21 @@ export default {
     position: relative;
     height: 100%;
     justify-content: space-between;
+    cursor: pointer;
+}
+.city:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(196, 196, 196, 0.255);
+    position: absolute;
+    z-index: 1  ;
+    top: 0;
 }
 
 .city span {
     padding: 10px;
-    z-index: 1;
+    z-index: 3;
 } 
 
 .weather-top {
@@ -84,7 +94,7 @@ export default {
     font-size: 20px;
 }
 .weather-top i {
-    z-index: 1;
+    z-index: 3;
     padding: 10px;
     cursor: pointer;
     opacity: 0.3;
@@ -96,7 +106,7 @@ export default {
 }
 
 .weather {
-    z-index: 1;
+    z-index: 3;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -126,6 +136,7 @@ export default {
 
 .overlay {
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
